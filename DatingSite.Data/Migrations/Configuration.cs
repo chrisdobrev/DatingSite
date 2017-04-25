@@ -9,7 +9,7 @@ namespace DatingSite.Data.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(DatingSite.Data.DatingSiteContext context)
