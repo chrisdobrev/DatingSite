@@ -1,4 +1,6 @@
-﻿using System.Web.Mvc;
+﻿using MySql.Data.MySqlClient;
+using System.Data.Entity;
+using System.Web.Mvc;
 
 namespace DatingSite.Web.Controllers
 {

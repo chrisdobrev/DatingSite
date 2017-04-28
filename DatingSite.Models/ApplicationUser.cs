@@ -23,9 +23,6 @@ namespace DatingSite.Models
             return userIdentity;
         }
 
-        [Required]
-        public string UserName { get; set; }
-
         [Required, Range(0, 120)]
         public int Age { get; set; }
 

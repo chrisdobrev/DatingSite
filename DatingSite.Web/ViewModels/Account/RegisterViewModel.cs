@@ -7,7 +7,7 @@ namespace DatingSite.Web.ViewModels.Account
     {
         [Required]
         [EmailAddress]
-        [Display(Name = "Email")]
+        [Display(Name = "Email"), MaxLength(256)]
         public string Email { get; set; }
 
         [Required]

@@ -50,6 +50,10 @@
       <HintPath>..\packages\MySql.Data.Entity.6.9.9\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="MySql.Server, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Server.1.1.0.0\lib\net45\MySql.Server.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -61,18 +65,33 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DatingSiteContext.cs" />
+    <Compile Include="DatingSiteInitializer.cs" />
+    <Compile Include="Migrations\201704281527088_MySqlSecondMigration.cs" />
+    <Compile Include="Migrations\201704281527088_MySqlSecondMigration.Designer.cs">
+      <DependentUpon>201704281527088_MySqlSecondMigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Migrations\DatingSiteHistoryContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DatingSite.Models\DatingSite.Models.csproj">
       <Project>{bca48420-ee5b-46b8-b033-a7f112542883}</Project>
       <Name>DatingSite.Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201704281527088_MySqlSecondMigration.resx">
+      <DependentUpon>201704281527088_MySqlSecondMigration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
